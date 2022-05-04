@@ -13,8 +13,7 @@ QInt::QInt(int a) {
 }
 // Support
 int QInt::powerOf2(int pow) { // return 2 ^ row
-	if (pow == 0) return 1;
-	else return 2 * powerOf2(pow - 1);
+	return (int)pow(2, pow);
 }
 bool QInt::getBit(int index) const { // get bit value at index
 	return data[3 - index / 32] >> (index % 32) & 1;
